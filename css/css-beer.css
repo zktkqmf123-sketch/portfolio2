@@ -1,0 +1,77 @@
+/* Gmarket Sans from noonnu (example import) */
+@import url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts@1.4/GmarketSans.css');
+
+/* Base reset */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+	min-height:100vh;
+	display:flex;
+	align-items:center; /* vertical center */
+	justify-content:center; /* horizontal center */
+	background:#ffffff;
+	font-family: 'GmarketSans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+	-webkit-font-smoothing:antialiased;
+}
+
+/* The outer wrapper exactly 1200 x 154 centered in the viewport */
+.beer-wrapper{
+	width:1200px;
+	height:154px;
+	display:flex;
+	flex-direction:column;
+	justify-content:space-between;
+	border:6px solid #e53935; /* main red frame from image */
+	padding:8px;
+	background:#fff;
+}
+
+/* Top row: three columns */
+.beer-top{
+	display:flex;
+	gap:16px;
+	align-items:center;
+	flex:0 0 auto;
+	height:80px;
+}
+.beer-top-left, .beer-top-center, .beer-top-right{
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+.beer-top-left{flex:1}
+.beer-top-center{flex:1}
+.beer-top-right{flex:1}
+
+.box{
+	width:100%;
+	height:56px;
+	border:4px solid #e53935;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+
+.logo{height:56px}
+
+.menu-links{font-size:12px;color:#666}
+.action-row{margin-top:6px;display:flex;gap:8px}
+.btn{padding:6px 14px;border-radius:18px;border:none;cursor:pointer;font-size:13px}
+.btn-pink{background:#f7b2ad;color:#fff}
+.btn-teal{background:#3ac0c9;color:#fff}
+
+/* Nav row matches red border in image */
+.beer-nav{
+	border-top:4px solid #e53935;
+	border-bottom:4px solid #e53935;
+	padding:12px 10px;
+}
+.beer-nav ul{display:flex;justify-content:space-around;list-style:none}
+.beer-nav li{color:#666;letter-spacing:1px;font-size:14px}
+
+/* Small responsive tweak for narrow viewports */
+@media (max-width:1220px){
+	.beer-wrapper{width:100%;padding:6px}
+	.box{height:48px}
+}
+
